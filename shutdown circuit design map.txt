@@ -1,0 +1,78 @@
+Rules for IC Engine Master Switch
+Master Switch: a switch that controls the action of relays or that makes and breaks the main supply line to a building or other installation
+Primary Master Switch
+Cockpit Master Switch
+Actuating Master Switch must:
+Stop the engine
+Disable any alternator field wire 
+Primary Master Switch
+Disable power to ALL electrical circuits, including the battery, alternator, lights, fuel pump(s), ignition and electrical controls.
+Be direct acting, not act through a relay or logic.
+All battery current must flow through this switch
+Be located on the right side of the vehicle, in proximity to the Main Hoop, at the driver's shoulder height
+Be easily actuated from outside the vehicle
+Be of the rotary mechanical type. A removable key may only be removable in the electrically open position
+Be rigidly mounted to the vehicle and must not be removed during maintenance
+Mounted so that the rotary axis of the key is near horizontal and across the vehicle
+The ON position must be in the horizontal position and must be marked accordingly
+The OFF position must be clearly marked
+Cockpit Master Switch
+Disable power to the ignition and fuel pump(s) and (ETC only) the electronic throttle in the OFF position
+May act through a relay
+Located in easy reach of the belted in driver, alongside the steering wheel, and unobstructed by the steering wheel or any other part of the vehicle
+Must be a push-pull or push-rotate emergency switch where pushing the button is the OFF position
+Have a minimum diameter of 24 mm
+
+Shutdown Switch Schematics
+https://www.wisconsinracing.org/wp-content/uploads/2020/10/2018_ESF_Submission.pdf
+https://www.formulastudent.de/fileadmin/user_upload/all/2020/rules/FS-Rules_2020_V1.0.pdf
+https://www.multisim.com/content/vADCHh2HvBnAcuWbSe4t3d/fsae-safety-shutdown-circuit/open/
+https://www.instructables.com/Formula-Student-Racing-BRAKE-SYSTEM-PLAUSIBILITY-D/
+https://www.instructables.com/Formula-Student-Racing-Shutdown-Circuit/
+
+Major parts of the shutdown circuit:
+Brake System Plausibility Device (BSPD)
+A standalone non programmable circuit must be used to monitor the electronic throttle control.
+The BSPD must be provided in addition to the plausibility checks in the ETC which interpret the drivers throttle request and control the engine throttle position.
+Signals from any sensors must be sent directly to the BSPD. Outputs from other modules may not be used in place of the raw sensor signals.
+The BSPD must monitor for the following conditions:
+Both of the following for more than one second:
+Hard braking (for example >0.8 g deceleration but without locking the wheels)
+Throttle greater than 10% open
+Loss of signal from the braking sensor(s) for more than 100 msec 
+Loss of signal from the throttle sensor(s) for more than 100 msec
+Removal of power from the BSPD circuit
+When any of the above conditions exist, the BSPD must:
+Shut off power to the electronic throttle
+Shut off fuel flow
+Close the throttle to the idle position
+The BSPD must only be reset by cycling the Primary Master Switch IC.8.4.3 OFF and ON
+The BSPD must not reset when the Cockpit Master Switch IC.8.4.4 is turned OFF
+The BSPD signals and function must be able to be checked during Technical Inspection by having one of:
+A separate set of detachable connectors for any signals from the braking sensor(s), throttle sensor(s) and removal of power to only the BSPD device.
+An inline switchable breakout box available that allows disconnection of the brake sensor(s), throttle sensor(s) individually and power to only the BSPD device.
+Inertia Switch
+Cockpit Kill Switch
+Brake Over-Travel Switch (BOTS)
+A Brake Over Travel Switch (BOTS) must be installed such that brake pedal travel exceeding the normal range will actuate the switch
+The BOTS must be a mechanical single pole, single throw (commonly known as a two position) switch (push-pull or flip type).
+Operation of the BOTS to the OFF position must:
+(IC) Shutdown the engine(s) and fuel pump(s) IC.8
+(EV) Open the Shutdown Circuit EV.8.2.2
+Repeated operation of the switch must not reset or restore power
+The BOTS must be designed so that the driver cannot reset it.
+The switch must be implemented with analog components, and not using programmable logic controllers, engine control units, or similar functioning digital controllers.
+Tractive System Main Switch (TSMS)/Control System Main System (CSMS)
+Insulation Monitoring Device (IMD)
+Battery Management System (BMS)
+Interlocks
+
+Master Switch Concept Schematics
+
+
+
+
+Next Steps
+Understand schematics for each component of shutdown circuit (BSPD, BOTS, etc.)
+LEARN OP AMPS
+
