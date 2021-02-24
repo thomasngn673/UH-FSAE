@@ -1,4 +1,5 @@
 Rules for IC Engine Master Switch
+
 Master Switch: a switch that controls the action of relays or that makes and breaks the main supply line to a building or other installation
 Primary Master Switch
 Cockpit Master Switch
